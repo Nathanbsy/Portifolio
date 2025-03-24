@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --font-color: #000;
+  --bg-color: #f8f8f8;
+  --bg-section-color: #e1f5ff;
+}
+
+.dark:root {
+  --font-color: #fff;
+  --bg-color: #464646;
+  --bg-section-color: #577c8e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  transition: all ease 0.4s;
+}
+
+/* Pre-sets */
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  transition: all ease 0.4s;
+}
+
+.secao-cor {
+  background-color: var(--bg-section-color);
+}
+
+h1,
+h2,
+h3,
+p,
+li {
+  color: var(--font-color);
+}
+
+/* Parte inicial */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.parallax {
+  position: absolute;
+  background-image: url("./assets/mundo-tecnologia-1.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50vw;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Sobre Mim */
+.sobre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.formacao-img {
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./assets/minha-foto.jpeg");
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.formacao {
+  display: flex;
+}
+
+.formacao-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+/* Soft Skills*/
+.container-listas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.lista-esquerda {
+  text-align: right;
+}
+.direita {
+  width: 50%;
+  padding: 5px;
+}
+.esquerda {
+  width: 50%;
+  border-right: var(--font-color) 2px solid;
+  padding: 5px;
+}
+
+/* Projetos */
+
+.projetos {
+  display: flex;
+  gap: 20px;
+}
+
+/* Contato */
+
+.contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bg-section-color);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+@media (width <= 768px) {
+  /* Parte inicial */
+  .parallax {
+    background-size: 100vw;
+  }
+
+  /* Projetos */
+  #projetos {
+    height: fit-content;
+  }
+  
+  .projetos {
+    flex-direction: column;
+  }
+}
