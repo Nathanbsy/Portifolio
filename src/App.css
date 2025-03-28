@@ -175,4 +175,11 @@ footer {
   .projetos {
     flex-direction: column;
   }
+  nav ul {
+    gap: 2vw;
+}
+
+a {
+    font-size: 3vw;
+}
 }
